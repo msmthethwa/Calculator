@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1c1c1c, #333);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background: #282828;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: flex-start; /* Align to the left */
+    gap: 10px; /* Space between logo and title */
+    margin-bottom: 15px;
+}
+
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0; /* Remove unnecessary margin */
+}
+
+.calc-title {
+    color: #ffd700; /* Gold color for a premium look */
+    font-size: 1.8em; /* Slightly larger font */
+    font-weight: bold;
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 1.5px; /* Adds spacing between letters */
+    font-family: "Arial", sans-serif; /* Modern and clean font */
+}
+
+
+/* Display */
+.display {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 2.5em;
+    text-align: right;
+    height: 80px;
+    color: #ffffff;
+    overflow-x: auto;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.operators, .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.button, .operatorsBtn {
+    padding: 15px;
+    font-size: 1.5em;
+    border: none;
+    background: #3a3a3a;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hover Effects */
+.button:hover, .operatorsBtn:hover {
+    background: #4a4a4a;
+    transform: scale(1.05);
+}
+
+.button:active, .operatorsBtn:active {
+    transform: scale(0.95);
+}
+
+.operator {
+    background: #f39c12;
+}
+
+.operator:hover {
+    background: #e67e22;
+}
+
+.equal {
+    background: #2ecc71;
+    grid-column: span 2;
+}
+
+.equal:hover {
+    background: #27ae60;
+}
+
+.power {
+    background: #c53535;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

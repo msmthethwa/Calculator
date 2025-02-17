@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js" defer></script>
+        <title>MS Scientific</title>    
+        <link rel="icon" type="image/png" href="https://i.postimg.cc/J7KnjmVD/MS-Scientific-Logo.png"> <!-- Favicon for browsers -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- Fallback for older browsers -->
+    </head>    
+<body>
+    <div class="calculator">
+        <div class="header">
+            <img src="https://i.postimg.cc/J7KnjmVD/MS-Scientific-Logo.png" alt="MS Scientific Logo" class="logo">
+            <h1 class="calc-title">MS Scientific</h1>
+        </div>
+
+        <input type="text" class="display" id="display" placeholder="0" disabled>
+        
+        <div class="operators">
+            <button class="operatorsBtn" onclick="memoryClear()">Mc</button>
+            <button class="operatorsBtn" onclick="memoryAdd()">M+</button>
+            <button class="operatorsBtn" onclick="memorySubtract()">M-</button>
+            <button class="operatorsBtn" onclick="scientificFunction('Math.sqrt')">√</button>
+            <button class="operatorsBtn power" onclick="togglePower()">ON/OFF</button>
+            <button class="operatorsBtn" onclick="scientificFunction('Math.pow', 2)">x²</button>
+            
+            <button class="operatorsBtn" onclick="scientificFunction('Math.abs')">|x|</button>
+            <button class="operatorsBtn" onclick="scientificFunction('Math.log')">log</button>
+            <button class="operatorsBtn" onclick="scientificFunction('Math.sin')">sin</button>
+            <button class="operatorsBtn" onclick="scientificFunction('Math.tan')">tan</button>
+            <button class="operatorsBtn" onclick="scientificFunction('Math.exp')">e^x</button>
+            <button class="operatorsBtn" onclick="clearScreen()">C</button>
+            <button class="operatorsBtn" onclick="onScreen('Math.PI')">π</button>
+            <button class="operatorsBtn" onclick="scientificFunction('Math.pow', 3)">x³</button>
+            <button class="operatorsBtn" onclick="scientificFunction('Math.log')">ln</button>
+        </div>
+        <br>
+        <div class="row">
+            <button class="button" onclick="onScreen('7')">7</button>
+            <button class="button" onclick="onScreen('8')">8</button>
+            <button class="button" onclick="onScreen('9')">9</button>
+            <button class="button operator" onclick="onScreen('(')">(</button>
+            <button class="button operator" onclick="onScreen(')')">)</button>
+        
+            <button class="button" onclick="onScreen('4')">4</button>
+            <button class="button" onclick="onScreen('5')">5</button>
+            <button class="button" onclick="onScreen('6')">6</button>
+            <button class="button operator" onclick="onScreen('+')">+</button>
+            <button class="button operator" onclick="onScreen('-')">-</button>
+        
+            <button class="button" onclick="onScreen('1')">1</button>
+            <button class="button" onclick="onScreen('2')">2</button>
+            <button class="button" onclick="onScreen('3')">3</button>
+            <button class="button operator" onclick="onScreen('*')">x</button>
+            <button class="button operator" onclick="onScreen('/')">/</button>
+        
+            <button class="button zero" onclick="onScreen('0')">0</button>
+            <button class="button" onclick="onScreen('.')">.</button>
+            <button class="button" onclick="onScreen('%')">%</button>
+            <button class="button equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+</body>
+</html>
